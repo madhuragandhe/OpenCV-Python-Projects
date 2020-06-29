@@ -3,7 +3,7 @@ import numpy as np
 
 video_capture=cv2.VideoCapture(0)
 while True:
-    frame=video_capture.read()
+    ret,frame=video_capture.read()
     hsv=cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
     lower=np.array([110,50,50])
     upper=np.array([130,255,255])
